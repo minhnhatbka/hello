@@ -11,7 +11,7 @@ import java.nio.file.Files;
 @RestController
 public class MainController {
 
-    @Value("classpath:config.yaml")
+    @Value("classpath:config/config.yml")
     Resource resourceFile;
 
     @GetMapping(value = "/")
