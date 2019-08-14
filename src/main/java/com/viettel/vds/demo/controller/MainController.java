@@ -18,8 +18,11 @@ public class MainController {
     @ResponseBody
     public String get() {
         try {
+            System.out.println(resourceFile.toString());
+            System.out.println(resourceFile.getFile());
             return new String(Files.readAllBytes(resourceFile.getFile().toPath()));
         } catch (Exception e) {
+            e.printStackTrace();
             return "Config not found";
         }
     }
