@@ -14,6 +14,7 @@ public class MainController {
     @GetMapping(value = "/")
     @ResponseBody
     public String get() {
+	int b = 1/0;
         try {
             return "Hello from " + envVersion;
         } catch (Exception e) {
